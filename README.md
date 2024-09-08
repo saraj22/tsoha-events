@@ -1,6 +1,4 @@
-# tsoha
-
-Tapahtumasovellus
+# Tapahtumasovellus
 
 Sovelluksessa näkyy tietyllä alueella järjestettävät tapahtumat, joista voi lukea lisätietoa ja niiden järjestäjistä voi lukea arvioita. Jokainen käyttäjä on peruskäyttäjä tai ylläpitäjä.
 
