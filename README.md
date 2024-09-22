@@ -22,6 +22,7 @@ Sovellusta voi testata kloonaamalla tämän repositorion omalle koneelle ja siir
 Luo sitten kansioon .env-tiedosto ja määritä sen sisällöksi: 
 
 
+
 DATABASE_URL= tietokannan-paikallinen-osoite
 
 import secrets
@@ -29,11 +30,15 @@ import secrets
 SECRET_KEY=secrets.token_hex(16)
 
 
+
 Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla:
 
 $ python3 -m venv venv
+
 $ source venv/bin/activate
+
 $ pip install -r ./requirements.txt
+
 
 
 Määritä vielä tietokannan skeema komennolla
