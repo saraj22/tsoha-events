@@ -13,3 +13,27 @@ Sovelluksen ominaisuuksia:
 - Käyttäjä voi seurata muita käyttäjiä, sekä nähdä heidän järjestämiä tapahtumia
 - Ylläpitäjä voi lisätä ja poistaa tapahtumia
 - Ylläpitäjä voi myös tarvittaessa poistaa annettuja arvioita tai käyttäjiä
+
+
+Tällä hetkellä sovelluksessa toimii vasta sisäänkirjautuminen, uuden käyttäjän rekisteröinti sekä uloskirjautuminen.
+
+Sovellus ei ole testattavissa Fly.iossa.
+Sovellusta voi testata kloonaamalla tämän repositorion omalle koneelle ja siirtymällä sen juurikansioon. 
+Luo sitten kansioon .env-tiedosto ja määritä sen sisällöksi: 
+
+DATABASE_URL=<tietokannan-paikallinen-osoite>
+import secrets
+SECRET_KEY=secrets.token_hex(16)
+
+Seuraavaksi aktivoi virtuaaliympäristö ja asenna sovelluksen riippuvuudet komennoilla:
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r ./requirements.txt
+
+Määritä vielä tietokannan skeema komennolla
+$ psql < schema.sql
+
+Nyt voit käynnistää sovelluksen komennolla
+$ flask run
+
+
