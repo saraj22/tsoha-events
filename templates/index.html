@@ -1,0 +1,10 @@
+{% if session.user_id %}
+Olet kirjautunut sisään.
+<a href="/logout">Kirjaudu ulos</a>
+{% else %}
+Kirjaudu sisään painamalla 
+<a href="/login">tästä</a> <br>
+Luo uusi käyttäjä painamalla 
+<a href="/register"">tästä</a> 
+{% endif %}
+<br>
