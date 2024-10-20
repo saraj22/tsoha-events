@@ -1,10 +1,33 @@
-<h2>Kirjaudu sisään</h2>
+<!DOCTYPE html>
 
-<form action="/login" method="post">
-Tunnus: <input type="text" name="username">
-<p>
-Salasana: <input type="password" name="password">
-<p>
-<input type="submit" value="Kirjaudu">
-</form>
-Jos sinulla ei ole tunnusta, voit luoda uuden tunnuksen <a href="/register">tästä</a>
+<html> 
+    
+<head> 
+    <title>Kirjaudu</title>
+</head>
+
+<body>
+
+    <h2>Kirjaudu sisään</h2>
+    <p>
+    <form action="/login" method="post"> 
+    <label for="tunnus">Tunnus: </label> <br>
+    <input id="tunnus" type="text" name="username" placeholder="Käyttäjätunnus" required>
+    <p> 
+    <label for="salasana">Salasana: </label> <br>
+    <input id="salasana" type="password" name="password" placeholder="salasana" required>
+    <p>
+    <input type="submit" value="Kirjaudu">
+    </form>
+    Jos sinulla ei ole tunnusta, voit luoda uuden tunnuksen <a href="/register">tästä</a>
+
+
+    <br>
+    <br>
+    <hr>
+    <a href="/">Palaa takaisin kotisivulle</a>
+
+
+</body>
+
+</html>
