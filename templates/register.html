@@ -1,11 +1,37 @@
-<h2>Uuden käyttäjän rekisteröinti</h2>
+<!DOCTYPE html>
 
-<form action="/register" method="post">
-Tunnus: <input type="text" name="username">
-<p>
-Salasana: <input type="password" name="password1">
-<p>
-Salasana uudestaan: <input type="password" name="password2">
-<p>
-<input type="submit" value="Luo tunnus">
-</form>
+<html> 
+    
+<head> 
+    <title>Rekisteröinti</title>
+</head>
+
+<body>
+
+    <h2>Uuden käyttäjän rekisteröinti</h2>
+    <p>
+    Tunnuksen pituus 1-25 merkkiä ja salasanan pituus 8-50 merkkiä.
+    <p>
+    <form action="/register" method="post">
+    <label for="tunnus">Tunnus: </label> <br>
+    <input id="tunnus" type="text" name="username" minlength="1" maxlength="25" placeholder="Käyttäjätunnus" required>
+    <p>
+    <label for="salasana">Salasana: </label> <br>
+    <input id="salasana" type="password" name="password1" minlength="8" maxlength="50" placeholder="salasana" required>
+    <p>
+    <label for="salasana-uudestaan">Salasana uudestaan: </label> <br>
+    <input id="salasana-uudestaan" type="password" name="password2" minlength="8" maxlength="50" placeholder="salasana" required>
+    <p>
+    <input type="submit" value="Luo tunnus">
+    </form>
+
+
+    <br>
+    <br>
+    <hr>
+    <a href="/">Palaa takaisin kotisivulle</a>
+
+
+</body>
+
+</html>
