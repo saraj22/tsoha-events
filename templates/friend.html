@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html> 
+    
+<head> 
+    <title> Kayttaja </title>
+</head>
+
+<body>
+    {% if session.user_id %}
+    <ul>
+        <li><a href="/" title="palaa etusivulle">Etusivu </a></li>
+        <li><a href="/logout" title="kirjaudu ulos">Kirjaudu ulos</a></li>
+        <li><a href="/profile" title="näytä oma profiili">Oma profiili </a></li>
+    </ul>
+
+    <br>
+    {% if friend_state == 0 %}
+    <h4>Haluatko seurata tätä käyttäjää? <a href="/{{ friend_id }}" title="seuraa käyttäjää">KYLLÄ </a></h4>
+    {% else %}
+    <h4>Haluatko lopettaa käyttäjän seuraamisen?  <a href="/{{ friend_id }}" title="lopeta käyttäjän seuraaminen">KYLLÄ </a></h4>
+    {% endif %} 
+
+    {% else %}
+    <ul>
+        <li><a href="/" title="palaa etusivulle">Etusivu </a></li>
+        <li>Kirjaudu sisään painamalla <a href="/login" title="kirjaudu sisään">tästä</a></li>
+    </ul>
+    {% endif %} 
+
+
+
+    <h1>TÄMÄ ON KÄYTTÄJÄN {{ user }} SIVU !</h1>
+
+
+
+    <br>
+    <h3>Käyttäjän tapahtumat:</h3> 
+    {% for event in friend_events %}
+    <ul>
+        <li><a href="/event/{{ event.id }}">{{ event.event_name }}</a></li> 
+    </ul>
+    {% endfor %}
+
+
+    <br>
+    <br>
+    <hr>
+    <a href="#" title="hyppää takaisin sivun alkuun">Takaisin sivun alkuun</a>
+
+
+</body>
+
+</html>
