@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html> 
+
+<body>
+    <h1>Luo uusi tapahtuma</h1>
+
+    <form action="/add" method="post">
+
+        <p>
+        <label for="tapahtuman-nimi">Tapahtuman nimi: </label> <br>
+        <input id="tapahtuman-nimi" type="text" name="name" minlength="1" maxlength="25" required></p>
+
+        <p>
+        <label for="päivämäärä">Tapahtuman päivämäärä: </label> <br>
+        <input id="päivämäärä" type="date" name="date" required></p>
+
+        <p>
+        <label for="tapahtuman-paikka">Tapahtuman paikka: </label> <br>
+        <select id="tapahtuman-paikka" name="location" required>
+            <option value="Helsinki">Helsinki</option>
+            <option value="Espoo">Espoo</option>
+            <option value="Tampere">Tampere</option>
+            <option value="Vantaa">Vantaa</option>
+            <option value="Oulu">Oulu</option>
+            <option value="Turku">Turku</option>
+            <option value="Jyväskylä">Jyväskylä</option>
+            <option value="Kuopio">Kuopio</option>
+            <option value="Lahti">Lahti</option>
+            <option value="Pori">Pori</option>
+            <option value="Kouvola">Kouvola</option>
+            <option value="Joensuu">Joensuu</option>
+            <option value="Lappeenranta">Lappeenranta</option>
+            <option value="Hämeenlinna">Hämeenlinna</option>
+            <option value="Vaasa">Vaasa</option>
+        </select>
+        </p>
+
+        <label for="lisätiedot">Lisätietoja tapahtumasta: </label> <br>
+        <textarea id="lisätiedot" name="info" rows="8" cols="40" maxlength="10000" required></textarea></p>
+        
+        <input type="submit" value="Lähetä">
+        <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+        
+    </form>
+
+</body>
+
+</html>
