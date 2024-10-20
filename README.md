@@ -5,17 +5,16 @@ Sovelluksessa näkyy tietyllä alueella järjestettävät tapahtumat, joista voi
 Sovelluksen ominaisuuksia:
 
 - Käyttäjä voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen
-- Käyttäjä näkee sovelluksen etusivulla listan alueista sekä jokaisen alueen tapahtumien määrän. Aluetta painamalla käyttäjä näkee kaikki kyseisellä alueella järjestettävät tapahtumat aikajärjestyksessä
-- Käyttäjä voi luoda uuden tapahtuman antamalla sille nimen, paikka- ja aikatiedot, aiheen sekä tarkemman selityksen
+- Käyttäjä näkee sovelluksen etusivulla listan alueista sekä jokaisen alueen tapahtumien määrän.
+- Aluetta painamalla käyttäjä näkee kaikki kyseisellä alueella järjestettävät tapahtumat
+- Käyttäjä voi luoda uuden tapahtuman antamalla sille nimen, paikka- ja aikatiedot sekä tarkemman selityksen
 - Käyttäjä voi muokata luomansa tapahtuman tietoja
-- Käyttäjä voi suorittaa haun tapahtumista aiheen perusteella
-- Käyttäjä voi antaa arvion tapahtumasta sekä sen järjestäjästä ja lukea muiden antamia arvioita
+- Käyttäjä voi poistaa oman tapahtumansa
 - Käyttäjä voi seurata muita käyttäjiä, sekä nähdä heidän järjestämiä tapahtumia
-- Ylläpitäjä voi lisätä ja poistaa tapahtumia
-- Ylläpitäjä voi myös tarvittaessa poistaa annettuja arvioita tai käyttäjiä
 
 
-Tällä hetkellä sovelluksessa toimii vasta sisäänkirjautuminen, uuden käyttäjän rekisteröinti sekä uloskirjautuminen.
+
+
 
 Sovellus ei ole testattavissa Fly.iossa.
 Sovellusta voi testata kloonaamalla tämän repositorion omalle koneelle ja siirtymällä sen juurikansioon. 
