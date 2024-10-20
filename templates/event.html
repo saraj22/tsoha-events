@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html> 
+    
+<head> 
+    <title> {{ event_name }} </title>
+</head>
+
+<body>
+    {% if session.user_id %}
+    <ul>
+        <li><a href="/" title="palaa etusivulle">Etusivu </a></li>
+        <li><a href="/logout" title="kirjaudu ulos">Kirjaudu ulos</a></li>
+        <li><a href="/profile" title="näytä oma profiili">Oma profiili </a></li>
+    </ul>
+
+    {% if user_id == session.user_id %}
+    <h4>Haluatko muokata tapahtumaasi <a href="/edit/{{ event_id }}" title="muokkaa tapahtumaa">KYLLÄ </a></h4>
+    {% else %} 
+    <h4>Haluatko tallentaa tapahtuman? </h4>
+    {% endif %} 
+
+    {% else %}
+    <ul>
+        <li><a href="/" title="palaa etusivulle">Etusivu </a></li>
+        <li>Kirjaudu sisään painamalla <a href="/login" title="kirjaudu sisään">tästä</a></li>
+    </ul>
+    {% endif %} 
+
+
+    <p>
+    <h1>{{ event_name }}</h1>
+    <br>
+    Tapahtuman päivämäärä: {{ event_date }}
+    <br>
+    Tapahtuma kaupungissa: {{ location }}
+    <br>
+    Tapahtuman järjestäjä: <a href="/friend/{{ user_id }}">{{ username }}</a>
+    <br>
+    <p>
+    Tietoa tapahtumasta:
+    <br>
+    {{ info }}
+    </p>
+    
+
+    <br>
+    <br>
+    <hr>
+    <a href="#" title="hyppää takaisin sivun alkuun">Takaisin sivun alkuun</a>
+
+</body>
+
+</html>
