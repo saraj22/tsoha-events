@@ -1,10 +1,46 @@
-{% if session.user_id %}
-Olet kirjautunut sisään.
-<a href="/logout">Kirjaudu ulos</a>
-{% else %}
-Kirjaudu sisään painamalla 
-<a href="/login">tästä</a> <br>
-Luo uusi käyttäjä painamalla 
-<a href="/register"">tästä</a> 
-{% endif %}
-<br>
+<!DOCTYPE html>
+
+<html> 
+    
+<head> 
+    <title>Events</title> 
+</head>
+
+<body>
+    {% if session.user_id %}
+    <ul>
+        <li><a href="/" title="palaa etusivulle">Etusivu </a></li>
+        <li><a href="/logout" title="kirjaudu ulos">Kirjaudu ulos</a></li>
+        <li><a href="/profile" title="näytä oma profiili">Oma profiili </a></li>
+    </ul>
+    {% else %}
+    <ul>
+        <li><a href="/" title="palaa etusivulle">Etusivu </a></li>
+        <li>Kirjaudu sisään painamalla <a href="/login" title="kirjaudu sisään">tästä</a></li>
+    </ul>
+    {% endif %} 
+
+
+
+    <p>
+    <h3>Valitse alta kaupunki, jonka tapahtumia haluat katsella. 
+        Tai katso <a href="/events" title="näytä kaikki tapahtumat">täältä </a> kaikki tapahtumat.
+    </h3> 
+
+    <ul>
+    {% for location in locations %}
+    <dl>
+        <dt><a href="/location/{{ location.id }}" > {{ location.location }}</a></dt>
+        <dd> Tulevia tapahtumia: {{ location.count }}</dd>
+    {% endfor %}
+    </ul>
+
+
+
+    <br>
+    <hr>
+    <a href="#" title="hyppää takaisin sivun alkuun">Takaisin sivun alkuun</a>
+
+</body>
+
+</html>
